@@ -7,7 +7,8 @@ using Xamarin.Forms;
 
 namespace CustomRenderer
 {
-    public class MyEntry : Entry
+    public class MyEntry : Entry // MyEmtry nedarver fra Entry (using Xamarin.Forms)
     {
+        // Heri kan godt lægges ekstra properties
     }
 }

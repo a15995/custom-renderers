@@ -17,14 +17,14 @@ using CustomRenderer.Droid;
 [assembly: ExportRenderer (typeof(MyEntry), typeof(MyEntryRenderer))]
 namespace CustomRenderer.Droid
 {
-    class MyEntryRenderer : EntryRenderer
+    class MyEntryRenderer : EntryRenderer // MyEntryRenderer nedarver fra EntryRenderer, som nedarver fra Entry (EntryControl.cs)
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged (e);
 
             if (Control != null) {
-                Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
+                Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen); // Android anvender Control frem for View (PCL)
             }
         }
     }
